@@ -1,3 +1,14 @@
+async function fetchTopics() {
+  try {
+    const topics = await document.browsingTopics({skipObservation:true});
+    console.log('Retrieved Topics:', topics);
+  } catch (error) {
+    console.error('Error fetching topics:', error);
+  }
+}
+
+fetchTopics();
+
 // create a function to create a iframe into the current page
 function createIframe() {
   const iframe = document.createElement('iframe');
