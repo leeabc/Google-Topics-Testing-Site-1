@@ -15,9 +15,9 @@ function createIframe() {
       (async () => {
         try {
           const topics = await document.browsingTopics();
-          alert('Retrieved Topics: ' + topics);
+          alert('Retrieved Topics: ' + JSON.stringify(topics));
         } catch (error) {
-          alert('Error fetching topics: ' + error);
+          alert('Error fetching topics: ' + JSON.stringify(error));
         }
       })();
     </script>
